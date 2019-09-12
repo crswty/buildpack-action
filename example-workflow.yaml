@@ -1,0 +1,18 @@
+name: Buildpack
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+    - name: docker-login
+      uses: "actions/docker/login@master"
+      env:
+       DOCKER_USERNAME: ${{ secrets.DockerUsername }}
+       DOCKER_PASSWORD: ${{ secrets.DockerPassword }}
+    - name: build
+      uses: crswty/buildpack-action@master
+      env:
+        PUBLISH: true
+        IMAGE_NAME: crswty/spring-music:latest
