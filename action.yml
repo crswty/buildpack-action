@@ -1,6 +1,9 @@
 name: 'Buildpack Action'
 description: 'Translates your source code into a container image using buildpacks'
 author: Chris Whitty
+branding:
+  icon: 'truck'
+  color: 'yellow'
 runs:
   using: 'docker'
   image: 'Dockerfile'
