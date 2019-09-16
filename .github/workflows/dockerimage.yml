@@ -18,6 +18,6 @@ jobs:
     - name: Build the Docker image
       run: |
         VERSION=$(git log -1 --format=%h)
-        docker build . --file docker/Dockerfile --tag crswty/buildpack-action:$VERSION
+        docker build . --file Dockerfile --tag crswty/buildpack-action:$VERSION
         docker push crswty/buildpack-action:$VERSION
 
