@@ -1,0 +1,23 @@
+name: Docker Image CI
+
+on: [push]
+
+jobs:
+
+  build:
+ 
+    runs-on: ubuntu-latest
+ 
+    steps:
+    - uses: actions/checkout@v1
+    - name: docker-login
+      uses: "actions/docker/login@master"
+      env:
+       DOCKER_USERNAME: ${{ secrets.DockerUsername }}
+       DOCKER_PASSWORD: ${{ secrets.DockerPassword }}
+    - name: Build the Docker image
+      run: |
+        VERSION=$(git log -1 --format=%h)
+        docker build . --file docker/Dockerfile --tag crswty/buildpack-action:$VERSION
+        docker push crswty/buildpack-action:$VERSION
+
