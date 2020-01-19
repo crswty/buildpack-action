@@ -13,6 +13,8 @@ This step example will autodetect the source code, build it with the correct bui
   env:
     IMAGE_NAME: crswty/spring-music:latest
     PUBLISH: true
+    BUILDER: cloudfoundry/cnb:bionic
+    CONTEXT: nodejs
 ```
 
 
