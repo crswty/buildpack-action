@@ -26,3 +26,4 @@ Option | Description | Default
 IMAGE_NAME | The name & tag of the image | required
 PUBLISH | If set, pushes the built images | 
 BUILDER | Buildpack builder Image| 
+CONTEXT | Realtive folder path | Uses git root
