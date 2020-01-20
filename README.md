@@ -27,5 +27,5 @@ Option | Description | Default
 IMAGE_NAME | The name & tag of the image | required
 PUBLISH | If set, pushes the built images | false
 BUILDER | Buildpack builder Image| cloudfoundry/cnb:bionic
-CONTEXT | Realtive folder path | git root
+CONTEXT | Relative folder path | git root
 VARS | Environment variables for the build |
