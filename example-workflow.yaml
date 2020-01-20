@@ -12,11 +12,9 @@ jobs:
        DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
       run: docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
     - name: build
-      uses: kdihalas/buildpack-action@master
+      uses: crswty/buildpack-action@master
       env:
         IMAGE_NAME: kdihalas/knative-nodejs-example:latest
-        BUILDER: cloudfoundry/cnb:bionic
-        CONTEXT: nodejs
         VARS: app=dev
     - name: docker-push
-      run: docker push kdihalas/knative-nodejs-example:latest
+      run: docker push crswty/spring-music:latest
