@@ -24,6 +24,6 @@ Configuration is provided as environment variables.
 Option | Description | Default
 ------ | ----------- | -------
 IMAGE_NAME | The name & tag of the image | required
-PUBLISH | If set, pushes the built images | 
-BUILDER | Buildpack builder Image| 
+PUBLISH | If set, pushes the built images | false
+BUILDER | Buildpack builder Image| required
 CONTEXT | Realtive folder path | Uses git root
