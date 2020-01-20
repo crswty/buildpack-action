@@ -14,7 +14,7 @@ jobs:
     - name: build
       uses: crswty/buildpack-action@master
       env:
-        IMAGE_NAME: kdihalas/knative-nodejs-example:latest
+        IMAGE_NAME: crswty/spring-music:latest
         VARS: app=dev
     - name: docker-push
       run: docker push crswty/spring-music:latest
