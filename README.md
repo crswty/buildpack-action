@@ -15,6 +15,7 @@ This step example will autodetect the source code, build it with the correct bui
     PUBLISH: true
     BUILDER: cloudfoundry/cnb:bionic
     CONTEXT: nodejs
+    VARS: db=mysql env=dev
 ```
 
 
