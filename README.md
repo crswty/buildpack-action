@@ -5,7 +5,7 @@ An action to build your source into a container image using [buildpacks](https:/
 
 
 ## Usage
-This step example will autodetect the source code, build it with the correct buildpack and then push it to dockerhub. It is expected that this step will run after a docker-login step. A full example workflow can be found [here](https://github.com/crswty/buildpack-action/blob/master/example-workflow.yaml).
+This step example will autodetect the source code, build it with the correct buildpack and then push it to dockerhub. It is expected that this step will run after a docker-login step. A full example workflow can be found [here](https://github.com/kdihalas/buildpack-action/blob/master/example-workflow.yaml).
 
 ```
 - name: build
