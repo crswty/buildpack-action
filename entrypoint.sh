@@ -8,4 +8,4 @@ if [ ! -z "$VARS" ]; then
   done
 fi
 
-/pack/pack build $IMAGE_NAME -q -p /github/workspace/$SOURCE_LOCATION/$CONTEXT --builder $BUILDER $PUBLISH_FLAG $ENV_FLAGS
+/pack/pack build $IMAGE_NAME  -p /github/workspace/$SOURCE_LOCATION/$CONTEXT --builder $BUILDER $PUBLISH_FLAG $ENV_FLAGS
