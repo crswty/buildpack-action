@@ -1,6 +1,6 @@
 **This action has now been archived**
 
-This was an interesting proof of concept but is now out of date compared to [pack](https://github.com/buildpacks/pack). Given that and the fact that pack could just be used directly, this repo is now archived and is not reccomended for use.
+This was an interesting proof of concept but is now out of date compared to [pack](https://github.com/buildpacks/pack). Given that and the fact that pack could just be used directly, this repo is now archived and is not recommended for use.
 
 # Buildpack Actions
 
