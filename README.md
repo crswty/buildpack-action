@@ -16,6 +16,9 @@ This step example will autodetect the source code, build it with the correct bui
   env:
     IMAGE_NAME: crswty/spring-music:latest
     PUBLISH: true
+    BUILDER: cloudfoundry/cnb:bionic
+    CONTEXT: nodejs
+    VARS: db=mysql env=dev
 ```
 
 
@@ -25,9 +28,7 @@ Configuration is provided as environment variables.
 Option | Description | Default
 ------ | ----------- | -------
 IMAGE_NAME | The name & tag of the image | required
-PUBLISH | If set, pushes the built images | 
-
-
-
-
-
+PUBLISH | If set, pushes the built images | false
+BUILDER | Buildpack builder Image| cloudfoundry/cnb:bionic
+CONTEXT | Relative folder path | git root
+VARS | Environment variables for the build |

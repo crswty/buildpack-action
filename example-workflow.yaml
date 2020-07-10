@@ -7,12 +7,14 @@ jobs:
     steps:
     - uses: actions/checkout@master
     - name: docker-login
-      uses: "actions/docker/login@master"
       env:
-       DOCKER_USERNAME: ${{ secrets.DockerUsername }}
-       DOCKER_PASSWORD: ${{ secrets.DockerPassword }}
+       DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
+       DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
+      run: docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
     - name: build
       uses: crswty/buildpack-action@master
       env:
-        PUBLISH: true
         IMAGE_NAME: crswty/spring-music:latest
+        VARS: app=dev
+    - name: docker-push
+      run: docker push crswty/spring-music:latest
